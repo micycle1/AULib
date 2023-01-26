@@ -1,7 +1,7 @@
 /**
- * Andrew's Utilities (AULib)
+ * Andrew's Utilities (imaginaryinstitute.aulib)
  * Motion blur, fields, easing, waves, uniformly-spaced curves, globs, and more!
- * http://imaginary-institute.com/resources/AULibrary/AULib.php
+ * http://imaginary-institute.com/resources/AULibrary/imaginaryinstitute.aulib.php
  *
  * Copyright (c) 2014-5 Andrew Glassner Andrew Glassner http://glassner.com
  *
@@ -25,7 +25,7 @@
  * @version     2.2.1 (221)
  */
 
-package AULib;
+package imaginaryinstitute.aulib;
 
 import processing.core.PApplet;
 import processing.core.PGraphics;
@@ -124,7 +124,7 @@ public class AUMultiField {
 	/*
 	 * void loadFromPixels(boolean _saveAlpha, PGraphics _pg) { int fieldsNeeded =
 	 * 3; if (_saveAlpha) fieldsNeeded = 4; if (fields.length < fieldsNeeded) {
-	 * AULib.reportError("AUMultiField", "RGBAfromPixels",
+	 * imaginaryinstitute.aulib.reportError("AUMultiField", "RGBAfromPixels",
 	 * "there are not at least "+fieldsNeeded+" fields available",
 	 * "fields.length="+Float.toString(fields.length)); return; } int wid = 0; int
 	 * hgt = 0; int[] thesePixels; if (_pg != null) { wid = _pg.width; hgt =

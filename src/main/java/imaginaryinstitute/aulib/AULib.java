@@ -1,7 +1,7 @@
 /**
- * Andrew's Utilities (AULib)
+ * Andrew's Utilities (imaginaryinstitute.aulib)
  * Motion blur, fields, easing, waves, uniformly-spaced curves, globs, and more!
- * http://imaginary-institute.com/resources/AULibrary/AULib.php
+ * http://imaginary-institute.com/resources/AULibrary/imaginaryinstitute.aulib.php
  *
  * Copyright (c) 2014-5 Andrew Glassner Andrew Glassner http://glassner.com
  *
@@ -25,7 +25,7 @@
  * @version     2.2.1 (221)
  */
 
-package AULib;
+package imaginaryinstitute.aulib;
 
 import processing.core.PConstants;
 
@@ -61,7 +61,7 @@ public class AULib implements PConstants {
 	}
 
 	private void welcome() {
-		System.out.println("Andrew's Utilities (AULib) 2.2.1 by Andrew Glassner http://glassner.com");
+		System.out.println("Andrew's Utilities (imaginaryinstitute.aulib) 2.2.1 by Andrew Glassner http://glassner.com");
 	}
 
 	public static void setErrorLevel(int _errorLevel) {
@@ -208,7 +208,7 @@ public class AULib implements PConstants {
 
 	public static float chooseOne(float[] _v) {
 		if ((_v == null) || (_v.length < 1)) {
-			reportError("AULib", "chooseOne", "the input array is null or has no entries. returning 0", "");
+			reportError("imaginaryinstitute.aulib", "chooseOne", "the input array is null or has no entries. returning 0", "");
 			return 0;
 		}
 		int index = (int) (AUMisc.jrandom(_v.length));
@@ -217,7 +217,7 @@ public class AULib implements PConstants {
 
 	public static int chooseOne(int[] _v) {
 		if ((_v == null) || (_v.length < 1)) {
-			reportError("AULib", "chooseOne", "the input array is null or has no entries. returning 0", "");
+			reportError("imaginaryinstitute.aulib", "chooseOne", "the input array is null or has no entries. returning 0", "");
 			return 0;
 		}
 		int index = (int) (AUMisc.jrandom(_v.length));
@@ -233,7 +233,7 @@ public class AULib implements PConstants {
 	// but doing it without the array is even slower!
 	public static float chooseOneWeighted(float[] _v, float[] _w) {
 		if ((_v == null) || (_v.length < 1) || (_w == null) || (_w.length < 1) || (_v.length != _w.length)) {
-			reportError("AULib", "chooseOneWeighted", "the two arrays are not both present with same size. returning 0", "");
+			reportError("imaginaryinstitute.aulib", "chooseOneWeighted", "the two arrays are not both present with same size. returning 0", "");
 			return 0;
 		}
 		float[] wsums = new float[_w.length];
@@ -256,7 +256,7 @@ public class AULib implements PConstants {
 
 	public static int chooseOneWeighted(int[] _v, float[] _w) {
 		if ((_v == null) || (_v.length < 1) || (_w == null) || (_w.length < 1) || (_v.length != _w.length)) {
-			reportError("AULib", "chooseOneWeighted", "the two arrays are not both present with same size. returning 0", "");
+			reportError("imaginaryinstitute.aulib", "chooseOneWeighted", "the two arrays are not both present with same size. returning 0", "");
 			return 0;
 		}
 		float[] wsums = new float[_w.length];

@@ -1,7 +1,7 @@
 /**
- * Andrew's Utilities (AULib)
+ * Andrew's Utilities (imaginaryinstitute.aulib)
  * Motion blur, fields, easing, waves, uniformly-spaced curves, globs, and more!
- * http://imaginary-institute.com/resources/AULibrary/AULib.php
+ * http://imaginary-institute.com/resources/AULibrary/imaginaryinstitute.aulib.php
  *
  * Copyright (c) 2014-5 Andrew Glassner Andrew Glassner http://glassner.com
  *
@@ -25,7 +25,7 @@
  * @version     2.2.1 (221)
  */
 
-package AULib;
+package imaginaryinstitute.aulib;
 
 import java.util.Arrays;
 
