@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/micycle1/AULib.svg)](https://jitpack.io/#micycle1/AULib)
+
 # The AU Library
 
 > I wrote the AU Library ("Andrew's Utilities") for Processing because in the course of making animations I found myself writing the same sorts of routines over and over again. So I've written them just once, made them efficient and easy to use, and now I'm sharing the library with you.
