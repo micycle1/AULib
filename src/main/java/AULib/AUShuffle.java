@@ -27,12 +27,11 @@
 
 package AULib;
 
-
-import processing.core.*;
+import java.util.Arrays;
 
 /**
  * 
- * @example AUShuffle_demo 
+ * @example AUShuffle_demo
  * 
  * (the tag @example followed by the name of an example included in folder 'examples' will
  * automatically include the example in the javadoc.)
@@ -40,57 +39,65 @@ import processing.core.*;
  */
 
 /*************************************************
-* AUSHUFFLE
-*************************************************/	
+ * AUSHUFFLE
+ *************************************************/
 
 public class AUShuffle {
 	float[] originals, shuffled;
 	int nextIndex, startingIndex;
-	
+
 	public AUShuffle(float[] _v) {
 		if (_v == null) {
 			AULib.reportError("AUShuffle", "AUShuffle", "array is null, using array { 0 }", "");
-			_v = new float[1]; 
+			_v = new float[1];
 			_v[0] = 0;
 		}
 		if (_v.length < 1) {
 			AULib.reportError("AUShuffle", "AUShuffle", "array has no entries, using array { 0 }", "");
-			_v = new float[1]; 
+			_v = new float[1];
 			_v[0] = 0;
 		}
 		buildShuffle(_v);
 	}
-	
+
 	public AUShuffle(int _n) {
 		float[] indices = new float[_n];
-		for (int i=0; i<indices.length; i++) indices[i] = i;
+		for (int i = 0; i < indices.length; i++) {
+			indices[i] = i;
+		}
 		buildShuffle(indices);
 	}
-	
+
 	void buildShuffle(float[] _v) {
 		originals = new float[_v.length];
 		shuffled = new float[_v.length];
-		for (int i=0; i<_v.length; i++) originals[i] = _v[i];
-		shuffleAgain((int)(AUMisc.jrandom(originals.length)));
+		for (int i = 0; i < _v.length; i++) {
+			originals[i] = _v[i];
+		}
+		shuffleAgain((int) (AUMisc.jrandom(originals.length)));
 		nextIndex = 0;
 	}
-	
+
 	void shuffleAgain(int dontStartHere) {
 		boolean[] used = new boolean[originals.length];
-		for (int i=0; i<used.length; i++) used[i] = false;
-		for (int i=0; i<used.length; i++) {
-			int n = (int)(AUMisc.jrandom(originals.length));
-			if (i==0) {
-				n = dontStartHere + (1 + (int)(AUMisc.jrandom(originals.length-1)));
+		Arrays.fill(used, false);
+		for (int i = 0; i < used.length; i++) {
+			int n = (int) (AUMisc.jrandom(originals.length));
+			if (i == 0) {
+				n = dontStartHere + (1 + (int) (AUMisc.jrandom(originals.length - 1)));
 				n = n % originals.length;
 			}
-			while (used[n]) n = (n+1)%originals.length;
+			while (used[n]) {
+				n = (n + 1) % originals.length;
+			}
 			used[n] = true;
 			shuffled[i] = originals[n];
-			if (i == used.length-1) startingIndex = n;
+			if (i == used.length - 1) {
+				startingIndex = n;
+			}
 		}
 	}
-	
+
 	public float next() {
 		if (nextIndex >= shuffled.length) {
 			shuffleAgain(startingIndex);
