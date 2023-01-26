@@ -32,3 +32,4 @@ Return the elements of a list, one by one, in random order. When they've all bee
 #### AUStepper
 A simple but powerful tool for easily creating animations composed of several distinct steps.
 #### AUGlob
+A smooth and highly controllable curved blend between two circles.
